@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a,b,c;
+    cin >>a>>b>>c;
+    int delta=b*b-4*a*c;
+    if(delta==0){
+        double x=-b*1.000/2*a;
+        cout <<setprecision(2)<<fixed<<x;
+    }
+    else{
+        if(delta>0){
+            double x1=(-b+sqrt(delta))*1.00/(2*a);
+            double x2=(-b-sqrt(delta))*1.00/(2*a);
+            if(x1 > x2){
+                double m=x1;
+                x1=x2;
+                x2=m;
+            }
+            cout <<setprecision(2)<<fixed<<x1<<"\n"<<setprecision(2)<<x2;
+        }
+        else{
+            double a1=-b*1.00/2*a;
+            double a2=sqrt(-delta)*1.00/2*a;
+            cout <<setprecision(2)<<fixed<<a1<<" "<<setprecision(2)<<-a2<<endl;
+            cout <<setprecision(2)<<fixed<<a1<<" "<<setprecision(2)<<a2;
+        }
+    }
+}
