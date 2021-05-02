@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    int a1,b1,c1,a2,b2,c2;
+    cin >>a1>>b1>>c1>>a2>>b2>>c2;
+    if(a1*b2-a2*b1==0){
+        double x=a1*1.0/a2;
+        double y=c1*1.0/c2;
+        if(x==y){
+            cout <<"Vo so nghiem";
+        }
+        else{
+            cout <<"Vo nghiem";
+        }
+    }
+    else{
+        double x1,x2;
+        double x=a1*1.0/a2;
+        x2=(c2*x-c1)/(b2*x-b1);
+        x1=(c1-b1)/a1;
+        cout <<"x = "<<x1<<", y = "<<x2;
+    }
+}
